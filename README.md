@@ -11,6 +11,7 @@
   <strong>Guide → </strong>
   <a href="#setup">Installation</a> ✯
   <a href="#usage">Usage</a> ✯
+  <a href="#release">Release</a> ✯
 </p>
 
 ---
@@ -38,3 +39,7 @@ const token = retrieveValue("valueKey", "local");
 // return null or value (as a string)
 const token = retrieveValue("valueKey", "session");
 ```
+
+## 📦 Releases <a name="release"></a>
+- Tag the latest commit for release
+- Initiate release manually on Github
