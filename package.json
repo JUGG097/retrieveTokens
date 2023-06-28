@@ -1,0 +1,41 @@
+{
+  "name": "retrievetokens",
+  "version": "1.0.0",
+  "description": "A simple package for interacting with web client storages like `localStorage`",
+  "source": "src/index.ts",
+  "exports": {
+    "type": "./dist/index.d.ts",
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.js"
+  },
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "unpkg": "./dist/index.umd.js",
+  "scripts": {
+    "build": "microbundle src/*.ts",
+    "dev": "microbundle watch src/*.ts",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JUGG097/retrieveTokens.git"
+  },
+  "keywords": [
+    "LocalStorage",
+    "SessionStorage"
+  ],
+  "author": "Adeoluwa Adeboye <adeoluwaadeboye@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JUGG097/retrieveTokens/issues"
+  },
+  "homepage": "https://github.com/JUGG097/retrieveTokens#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.2",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "microbundle": "^0.15.1",
+    "ts-jest": "^29.1.0"
+  }
+}
