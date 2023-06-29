@@ -6,7 +6,6 @@
 </p>
 
 ---
-
 <p align="center">
   <strong>Guide → </strong>
   <a href="#setup">Installation</a> ✯
@@ -23,7 +22,7 @@
 
 ## 🔧 Installation & Setup <a name="setup"></a> <a name="installation"></a>
 
-1️⃣ **Install** by running: `npm i retrieveTokens`
+- **Install** by running: `npm i retrieveTokens`
 
 ## 📦 Usage & Configuration <a name="usage"></a>
 
