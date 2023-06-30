@@ -1,0 +1,9 @@
+.gitignore
+package-lock.json
+.vscode
+/src
+.github
+/test
+tsconfig.json
+jest.config.js
+/node_modules
