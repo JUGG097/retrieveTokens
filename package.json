@@ -1,17 +1,17 @@
 {
   "name": "retrievetokens",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A simple package for interacting with web client storages like `localStorage`",
-  "source": "src/index.ts",
+  "source": "src/index.ts",             
+  "main": "dist/index.js",              
+  "umd:main": "dist/index.umd.js",        
+  "module": "dist/index.mjs",             
   "exports": {
-    "type": "./dist/index.d.ts",
-    "require": "./dist/index.js",
-    "default": "./dist/index.modern.js"
+    "types": "./dist/index.d.ts",         
+    "require": "./dist/index.js",         
+    "default": "./dist/index.modern.mjs"
   },
-  "types": "./dist/index.d.ts",
-  "main": "./dist/index.js",
-  "module": "./dist/index.module.js",
-  "unpkg": "./dist/index.umd.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "microbundle src/*.ts",
     "dev": "microbundle watch src/*.ts",
