@@ -1,8 +1,14 @@
 import {
 	addValueInterface,
-	removeValueInterface,
+	deleteValueInterface,
 	retrieveValueInterface,
+	retrieveValuesInterface,
 	storageOptions,
+	addValuesInterface,
+	addArrayInputObj,
+	addArrayResultObj,
+	retrieveArrayObj,
+	deleteValuesInterface,
 } from "./utils";
 
 export const retrieveValue: retrieveValueInterface = (
@@ -17,6 +23,17 @@ export const retrieveValue: retrieveValueInterface = (
 		default:
 			return null;
 	}
+};
+
+export const retrieveValues: retrieveValuesInterface = (
+	valueKeys: string[],
+	storageType: storageOptions
+) => {
+	let result_obj: retrieveArrayObj = {};
+	valueKeys.forEach((element) => {
+		result_obj[element] = retrieveValue(element, storageType);
+	});
+	return result_obj;
 };
 
 export const addValue: addValueInterface = (
@@ -45,7 +62,18 @@ export const addValue: addValueInterface = (
 	}
 };
 
-export const deleteValue: removeValueInterface = (
+export const addValues: addValuesInterface = (
+	keyValuePair: addArrayInputObj,
+	storageType: storageOptions
+) => {
+	let result_obj: addArrayResultObj = {};
+	for (const key in keyValuePair) {
+		result_obj[key] = addValue(key, keyValuePair[key], storageType);
+	}
+	return result_obj;
+};
+
+export const deleteValue: deleteValueInterface = (
 	valueKey: string,
 	storageType: storageOptions
 ) => {
@@ -67,4 +95,15 @@ export const deleteValue: removeValueInterface = (
 		default:
 			return false;
 	}
+};
+
+export const deleteValues: deleteValuesInterface = (
+	valueKeys: string[],
+	storageType: storageOptions
+) => {
+	let result_obj: addArrayResultObj = {};
+	valueKeys.forEach((element) => {
+		result_obj[element] = deleteValue(element, storageType);
+	});
+	return result_obj;
 };

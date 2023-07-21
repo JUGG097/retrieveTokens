@@ -1,6 +1,6 @@
 {
   "name": "retrievetokens",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A simple package for interacting with web client storages like `localStorage`",
   "source": "src/index.ts",             
   "main": "dist/index.js",              

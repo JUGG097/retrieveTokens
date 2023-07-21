@@ -29,43 +29,49 @@
 - Fetch key:value stored in storage
 ```js
 // Using ES6 import syntax
-import {retrieveValue} from 'retrievetokens';
+import {retrieveValue, retrieveValues} from 'retrievetokens';
 
 // Retrieve token from the local storage
 // returns null or value (as a string)
 const token = retrieveValue("valueKey", "local");
+const tokenObj = retrieveValues(["key1", "key2"], "local");
 
 // Retrieve token from the session storage
 // returns null or value (as a string)
 const token = retrieveValue("valueKey", "session");
+const tokenObj = retrieveValues(["key1", "key2"], "session");
 ```
 
 - Store key:value pair in storage
 ```js
 // Using ES6 import syntax
-import {addValue} from 'retrievetokens';
+import {addValue, addValues} from 'retrievetokens';
 
 // Store token in the local storage
 // returns true or false (if it fails to store)
 const token = addValue("key", "value", "local");
+const tokenObj = addValues({ key1: "value", key2: "value2" }, "local");
 
 // Store token in the session storage
 // returns true or false (if it fails to store)
 const token = addValue("key", "value", "session");
+const tokenObj = addValues({ key1: "value", key2: "value2" }, "session");
 ```
 
 - Delete stored key:value pair from storage
 ```js
 // Using ES6 import syntax
-import {deleteValue} from 'retrievetokens';
+import {deleteValue, deleteValues} from 'retrievetokens';
 
 // Delete token from the local storage
 // returns true or false (if it fails to delete)
 const token = deleteValue("valueKey", "local");
+const tokenObj = deleteValues(["key1", "key2"], "local");
 
 // Delete token from the session storage
 // returns true or false (if it fails to delete)
 const token = deleteValue("valueKey", "session");
+const tokenObj = deleteValues(["key1", "key2"], "session");
 ```
 
 ## 📦 Releases <a name="release"></a>
